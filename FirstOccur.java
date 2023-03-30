@@ -1,4 +1,4 @@
-/*This is a program to that finds the first occurance of a string in another string
+/*This is a program  that finds the first occurance of a string in another string
  */
 
 import java.util.*;
