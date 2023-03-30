@@ -17,7 +17,7 @@ public class TwoSum {
                     number.add(k);
                     for(int m = 0; m<number.size(); m++)
                     {
-                        System.out.println("Output: " + nums[m]);
+                        System.out.println("Output: " + number.get(m));
                     }  
 
                     //System.out.println("Output: " + nums);
