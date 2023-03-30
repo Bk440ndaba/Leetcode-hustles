@@ -9,7 +9,7 @@ public class TwoSum {
         ArrayList<Integer> number = new ArrayList<>();
         for(int i = 0; i<nums.length; i++)
         {
-            for(int k = 0; k<nums.length; k++)
+            for(int k = i+1; k<nums.length; k++)
             {
                 if(nums[i] + nums[k] == target)
                 {
@@ -18,13 +18,15 @@ public class TwoSum {
                     for(int m = 0; m<number.size(); m++)
                     {
                         System.out.println("Output: " + nums[m]);
-                    }
+                    }  
 
+                    //System.out.println("Output: " + nums);
+                    
                 }
 
                 else
                 {
-                    System.out.println("No target found.");
+                    //System.out.println("No target found.");
                 }
             }
         }
