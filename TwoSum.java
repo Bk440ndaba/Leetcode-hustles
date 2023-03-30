@@ -3,7 +3,7 @@ import java.util.*;
 public class TwoSum {
     public static void main(String [] args)
     {
-        int [] nums = {2, 7, 9, 15};
+        int [] nums = {2, 7, 9, 15, 0, };
         int target = 9;
 
         ArrayList<Integer> number = new ArrayList<>();
@@ -15,12 +15,14 @@ public class TwoSum {
                 {
                     number.add(i);
                     number.add(k);
-                    for(int m = 0; m<number.size(); m++)
+                    System.out.println("output: " + number);
+                   /** for(int m = 0; m<number.size(); m++)
                     {
                         System.out.println("Output: " + number.get(m));
                     }  
 
-                    //System.out.println("Output: " + nums);
+                    //System.out.println("Output: " + nums); */
+                    
                     
                 }
 
