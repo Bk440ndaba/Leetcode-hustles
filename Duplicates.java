@@ -19,8 +19,10 @@ public class Duplicates {
             
 
         }
+    
+        Arrays.sort(arr);
 
-        /*for(int k = 0; k<arr.length; k++) checking whether all elements are added inside my array
+        for(int k = 0; k<arr.length; k++)// checking whether all elements are added inside my array
         { 
             System.out.println(arr[k]);
 
@@ -28,7 +30,7 @@ public class Duplicates {
 
         for (int j : arr) {
             //System.out.println(j);     Added added succefully
-        }       */   
+        }       
 
         
 
