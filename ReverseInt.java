@@ -8,6 +8,7 @@ public class ReverseInt {
         System.out.println("Enter your number: ");
         int num = sc.nextInt();
         String number = Integer.toString(num);
+        ArrayList<Character> arr = new ArrayList<>();
 
         //int number2 = number.length();
        // System.out.println(number2);
@@ -15,16 +16,25 @@ public class ReverseInt {
       
       if(number.contains("-"))
       {
-        System.out.println("yes");
+        arr.add('-');
+        for(int i = number.length()-1; i>=0; i--)
+        {
+            arr.add(number.charAt(i));     
+        }
+        int rem = arr.size()-1;
+        arr.remove(rem);
+        System.out.println(arr);
       }
       else
       {
         for(int i = number.length()-1; i>=0; i--)
-        {
-            System.out.println(number.charAt(i));
+        { 
+            arr.add(number.charAt(i));
             //arr[i] = number.charAt(i);
            // i++;
         }
+      
+        System.out.println(arr);
       }
 
 
