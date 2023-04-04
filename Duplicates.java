@@ -7,6 +7,7 @@ public class Duplicates {
         int size = sc.nextInt();
         int [] arr = new int[size];
         ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list2 = new ArrayList<>();
         int i = 0;
         
 
@@ -25,35 +26,58 @@ public class Duplicates {
         Arrays.sort(arr);
         System.out.println();
 
-        for(int k = 0; k<arr.length; k++)// checking whether all elements are added inside my array
+        for(int k = 0; k<arr.length; k++)// checking whether all elements are added inside my arrayList
         { 
-            list.add(arr[k]);
+            list.add(arr[k]);     // added all elements
 
         }
         //System.out.println(list);
+
         for(int m = 0; m<list.size()-1; m++)
         {
-            
-            if( list.get(m) == list.get(m+1))
+            if(list.get(m).equals(list.get(m+1)))
             {
-                list.remove(m+1);
-                System.out.println(list);
+                list2.add(list.get(m+1));
             }
-            else
-            {
-                System.out.println("Output: " + list);
-                System.out.println("The list aboves does not have any duplicates.");
+    
 
-                
-            }
+        }
 
+        if(list2.isEmpty())
+        {
+            System.out.println("output " + list);
+        
+            System.out.println("The list aboves does not have any duplicates.");
 
-            
-            
+        }
+        else
+        {
+            System.out.println("Output " + list2);
+            System.out.println("The duplicates found.");
 
             
 
         }
+
+
+
+         
+    /*     if( list.get(m) == list.get(m+1))
+        {
+            list.remove(m+1);  // Keeps on adding elements even if they dont meet the condition
+            //list2.add(list.get(m));
+            
+
+            //System.out.println(list);
+        }
+        else
+        {
+            System.out.println("Output: " + list);
+           
+            
+        }  */
+
+        
         
         
 
