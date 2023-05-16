@@ -3,7 +3,7 @@ import java.util.*;
 public class Largest {
     public static void main (String [] args)
     {
-        int []  nums = {1, 30, 500, 40, 8, 9, 11, 60, 6, 4, 9, 30, 5, 8987};
+        int []  nums = {1, 30, 587, 40, 8, 9, 11, 60, 6, 4,9};
         
         
 
@@ -31,7 +31,7 @@ public class Largest {
            if(numbers[k].length() > 1)
            {
             
-                s = numbers[k].split("");
+                s = numbers[k].split(""); /// Seems to be the problem
            }
            else
            {
