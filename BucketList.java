@@ -13,11 +13,14 @@ public class BucketList {
         String string = sc.nextLine();
         String [] words = string.split(",");
         ArrayList<String> listOfWords = new ArrayList<>();
+        ArrayList<String> uncategorised = new ArrayList<>();
+       Map<String, String> map = new HashMap<>();
+
         for(int i = 0; i<words.length; i++)
         {
             listOfWords.add(words[i]);
         }
-            System.out.println(listOfWords);
+           // System.out.println(listOfWords);     //checking listOfWords
 
 
         try 
@@ -41,7 +44,38 @@ public class BucketList {
             listOfCategory.add(line);
 
         }
-        System.out.println(listOfCategory);
+        //System.out.println(listOfCategory);    //checking listOfCategories
+
+       for(int k = 0; k<listOfWords.size(); k++)    /// looping through the list of words
+       {
+            //int counter = 0;
+            for(int counter = 0; counter<listOfCategory.size(); counter++)   // also loop through list of category
+            {
+                boolean categorised = false;   // checks if a word is successfully categorized
+                if(listOfWords.get(k).startsWith(listOfCategory.get(counter)))
+                {
+                    //Map<String, String> map = new HashMap<>();
+                   map.put(listOfWords.get(k), listOfCategory.get(counter));
+                   categorised = true;
+                   break;
+                   
+                   
+                }
+                
+                if(!categorised)
+                {
+                    uncategorised.add(listOfWords.get(k));
+                }
+                  
+                
+            }
+          
+       }
+
+       System.out.println(map);
+       System.out.println(uncategorised);
+      // String cate = map.get(listOfWords.get(k));
+       //System.out.println(cate);
 
 
         
